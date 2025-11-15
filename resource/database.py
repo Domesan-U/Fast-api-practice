@@ -5,12 +5,7 @@ from sqlalchemy.orm import sessionmaker
 # Example: SQLite (easy start)
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test.db"
 
-# For PostgreSQL:
-# SQLALCHEMY_DATABASE_URL = "postgresql://user:password@localhost/dbname"
-
-# For MySQL:
-# SQLALCHEMY_DATABASE_URL = "mysql://user:password@localhost/dbname"
-
+#
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False} if "sqlite" in SQLALCHEMY_DATABASE_URL else {}
 )
